@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Death Star Registration</title>
+        <!--Amara Hill-->
+        <link rel="stylesheet" href="strings.css">
+    </head>
+    <body>
+        <header>
+            <h1>*** Death Star Registration ***</h1>
+        </header>
+        <p>Welcome to one of the thousands of computers on the Death Star.</p>
+        <p>You will use this computer to register that you are on Death Star.</p>
+       <main>
+        
+        <hr/>
+        <h2>Registration Form</h2>
+       
+    <form>
+        <!--Create a label and input box for first name-->
+        <label>First Name:</label><br/>
+        <input type="text" id="firstName"><br/>
+
+        <!--Create a label and input box for last name-->
+        <label>Last Name:</label><br/>
+        <input type="text" id="lastName"><br/>
+
+        <!--Stormtrooper ID-->
+        <label>Stormtrooper ID:</label><br/>
+        <input type="text" id="StormtrooperID"><br/>
+        <hr/>
+
+        <!--Create a button for user to submit form-->
+        <button onclick="checkForm()">Submit</button>
+    </form>
+
+        <!--Notice we are leaving HTML-->
+        <script>
+            //Now we are in JavaScript
+            //Create a function
+            //warning - do not continue if the orogram is invalid
+            function checkForm(){
+                //get first name from the form
+                var firstName = document.getElementById("firstName").value;
+
+                //get the last name from the form
+                var lastName = document.getElementById("lastName").value;
+
+                //get the stormtrooper ID from the form
+                var stormtrooperID = document.getElementById("StormtrooperID").value;
+
+                //check if the first name is more than 20 characters
+                if(firstName.length > 20){
+                    alert("First Name is too long for a strom trooper. Please enter a name less than 20 characters.")
+                    return;
+                }
+                
+                //check if the Stormtrooper ID is 5 characters
+                if(stormtrooperID.length != 5){
+                    alert("StormtrooperID is too short. Please enter a 5 digit ID.")
+                    return;
+                }
+            
+            //let's combine the first and last name and dispay it
+            var fullName = firstName + " " + lastName;
+            alert("Welcome to the Death Star " + fullName + " with Stormtrooper ID: " + stormtrooperID);
+            }
+
+        </script>
+
+        <!--Now we are back in HTML only-->
+
+       </main>
+       <br/>
+       <br/>
+       <br/>
+       <br/>
+       <br/>
+       <img src="stormtrooper.jpeg" rel="image of a stormtrooper">
+    </body>
+
+    <footer>
+
+    </footer>
+
+</html>
